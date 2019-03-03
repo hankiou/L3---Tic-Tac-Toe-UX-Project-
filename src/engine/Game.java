@@ -1,5 +1,7 @@
 package engine;
 
+import AI.*;
+
 public class Game {
 
 	private Player players[];
@@ -10,7 +12,16 @@ public class Game {
 		players = new Player[2];
 		players[0] = new Player_human(1);
 		
-		if(cfg.isAgainstAI()) players[1] = new Player_ai(-1);
+		if(cfg.isAgainstAI())
+			try {
+				players[1] = new Player_ai(-1, (Algorithm)Class.forName("AI."+cfg.getAiAlgorithmName()).newInstance());
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
 		else players[1] = new Player_human(-1);
 	}
 	

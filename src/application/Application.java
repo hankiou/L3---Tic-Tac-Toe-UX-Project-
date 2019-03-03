@@ -11,8 +11,10 @@ public class Application {
 		
 		cfg = new Config();
 		/// SET PARAMETERS ///
-		cfg.setAgainstAI(false);
+		cfg.setAgainstAI(true);
 		
+		
+		// Creating a game (has to be moved later)
 		Game game = new Game(cfg);
 		game.run();
 	}
