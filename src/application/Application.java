@@ -1,5 +1,6 @@
 package application;
 
+import GUI.Gui;
 import engine.*;
 
 public class Application {
@@ -9,13 +10,14 @@ public class Application {
 	public void launch() {
 		// GUI things //
 		
-		cfg = new Config();
+		//cfg = new Config();
 		/// SET PARAMETERS ///
-		cfg.setAgainstAI(true);
+		//cfg.setAgainstAI(true);
 		
+		Gui gui = new Gui();
 		
 		// Creating a game (has to be moved later)
-		Game game = new Game(cfg);
-		game.run();
+		//Game game = new Game(cfg);
+		//game.run();
 	}
 }

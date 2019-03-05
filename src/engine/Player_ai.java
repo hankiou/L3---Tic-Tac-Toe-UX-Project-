@@ -6,7 +6,7 @@ public class Player_ai extends Player{
 	
 	Algorithm algo; // See later
 
-	public Player_ai(int side, AI.Algorithm algorithm) {
+	public Player_ai(int side, Algorithm algorithm) {
 		super(side);
 		this.algo = algorithm;
 	}
